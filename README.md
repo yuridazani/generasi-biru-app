@@ -6,6 +6,8 @@ Proyek ini merupakan studi kasus *front-end* fungsional yang dikembangkan oleh *
 
 ---
 
+![Tangkapan Layar Website Generasi Biru](https://raw.githubusercontent.com/yuridazani/generasi-biru-app/main/public/generasi-biru.png)
+
 ##  Deskripsi Proyek
 
 "Generasi Biru" adalah sebuah studi kasus website untuk sebuah gerakan aktivisme lingkungan fiktif. Tujuan proyek ini adalah untuk membangun sebuah "pusat gerakan" digital yang profesional dan kredibel.
