@@ -80,15 +80,16 @@ export function KruSection() {
           </p>
         </div>
       </div>
-      <motion.div 
-        className="w-full mt-16 cursor-grab" 
+    <motion.div 
+        className="w-full mt-16" 
         ref={constraintsRef}
       >
         <motion.div 
-          className="flex gap-6 md:gap-8 px-4 sm:px-6 lg:px-8"
+          className="flex gap-6 md:gap-8 px-4 sm:px-6 lg:px-8 cursor-grab" 
           drag="x"
           dragConstraints={constraintsRef}
           dragTransition={{ bounceStiffness: 300, bounceDamping: 20 }}
+          whileTap={{ cursor: "grabbing" }} 
         >
           <KruCard 
             name="Alifia 'Lifi' R." 
