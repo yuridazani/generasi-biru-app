@@ -3,34 +3,31 @@ import { ArrowRight, Mountain, Leaf } from 'lucide-react';
 
 function HeroSection() {
   return (
-<section className="relative overflow-hidden bg-alice-blue 
-                    min-h-screen flex items-center
-                    snap-start snap-always
-                    px-4 sm:px-6 lg:px-8"> {/* Tambah padding horizontal */}
-  <div className="container mx-auto py-12 md:py-16">
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
-      <div className="md:col-span-7">
-        <p className="text-xs sm:text-sm font-bold text-safety-orange uppercase tracking-widest mb-3">
-          Generasi Biru
-        </p>
+    <section className="relative bg-alice-blue 
+                        flex items-center 
+                        min-h-screen
+                        w-full"> {/* Tambah w-full */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          <div className="md:col-span-7">
+            <p className="text-sm md:text-base font-bold text-safety-orange uppercase tracking-widest mb-3">
+              Generasi Biru
+            </p>
 
-        <h1 className="font-display font-black 
-                       text-3xl sm:text-4xl md:text-6xl lg:text-8xl 
-                       leading-tight text-brand-dark">
-          <span className="relative inline-block">
-            Garda Depan
-            <span className="absolute left-0 bottom-1 w-full h-1.5 md:h-2 
-                           bg-safety-orange opacity-70 -rotate-2"></span>
-          </span>
-          <br/> Gerakan Iklim
-          <br/> Indonesia.
-        </h1>
-        
-        <p className="mt-6 text-base sm:text-lg md:text-xl 
-                      text-steel-blue max-w-2xl font-medium">
-          Kami adalah anak muda yang berdiri di garis terdepan, 
-          memimpin aksi nyata untuk masa depan Bumi yang lebih baik.
-        </p>
+            <h1 className="font-display font-black text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-none text-brand-dark">
+              <span className="relative inline-block">
+                Garda
+                <span className="absolute left-0 bottom-1 w-full h-2 bg-safety-orange opacity-70 -rotate-2"></span>
+              </span>
+              <br/>Depan
+              <br/>Gerakan Iklim
+              <br/>Indonesia.
+            </h1>
+            
+            <p className="mt-8 text-lg md:text-xl text-steel-blue max-w-2xl font-medium">
+              Kami adalah anak muda yang berdiri di garis terdepan, 
+              memimpin aksi nyata untuk masa depan Bumi yang lebih baik.
+            </p>
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4">
               <a 
@@ -55,7 +52,8 @@ function HeroSection() {
               </a>
             </div>
           </div>
-          <div className="md:col-span-5 hidden md:block relative z-0">
+          
+          <div className="md:col-span-5 hidden md:block">
             <div className="relative w-full h-96 xl:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-br from-steel-blue to-brand-dark opacity-90"></div>
               <div className="absolute w-3/4 h-3/4 bg-safety-orange rounded-full -top-1/4 -right-1/4 mix-blend-multiply opacity-30 animate-pulse-slow"></div>
@@ -65,7 +63,6 @@ function HeroSection() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

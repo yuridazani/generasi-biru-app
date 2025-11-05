@@ -5,14 +5,27 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
   html {
     @apply scroll-smooth;
   }
+  
   body {
-    /* HAPUS semua ini: */
-    /* @apply h-screen overflow-y-scroll snap-y snap-mandatory; */
-    
-    /* Ganti jadi ini aja: */
     @apply font-body bg-alice-blue text-brand-dark antialiased;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    overflow-x: hidden; /* PENTING: Cegah horizontal scroll */
+  }
+  
+  #root {
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 }

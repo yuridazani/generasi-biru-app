@@ -33,13 +33,12 @@ function AnimatedNumber({ value, prefix = "", suffix = "" }) {
 
   return <span ref={ref}>{formattedValue}</span>;
 }
-
 const StatCard = ({ value, label, prefix, suffix, className, labelClassName }) => (
-  <div className={`p-6 sm:p-8 md:p-10 rounded-2xl shadow-lg ${className}`}>
-    <h3 className="font-stats text-3xl sm:text-5xl md:text-7xl break-words">
+  <div className={`p-8 md:p-10 rounded-2xl shadow-lg ${className}`}>
+    <h3 className="font-stats text-4xl sm:text-5xl md:text-7xl">
       <AnimatedNumber value={value} prefix={prefix} suffix={suffix} />
     </h3>
-    <p className={`font-stats text-xs sm:text-sm md:text-base uppercase mt-3 ${labelClassName}`}>
+    <p className={`font-stats text-sm md:text-base uppercase mt-3 ${labelClassName}`}>
       {label}
     </p>
   </div>

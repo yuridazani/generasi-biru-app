@@ -34,7 +34,6 @@ const CtaButton = ({ href, children }) => (
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Navigasi "BALANCE" kita
   const navItems = [
     { label: 'Kenapa Kami Ada', href: '/manifesto' },
     { label: 'Bukti Kerja', href: '/impact' },
@@ -43,9 +42,9 @@ export function Navbar() {
   ];
 
   return (
-<nav className="sticky top-0 bg-white shadow-md w-full z-50"> {/* Ganti z-20 ke z-50 */}
-  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="flex items-center justify-between h-16 md:h-20">
+  <nav className="sticky top-0 bg-white shadow-md w-full z-50"> {/* Hapus sticky kalau mau ss */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Ganti container jadi max-w */}
+        <div className="flex items-center justify-between h-20">
           
           {/* 1. Logo (Bold, Profesional) */}
           <a href="/" className="flex-shrink-0">

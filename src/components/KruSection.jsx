@@ -82,9 +82,11 @@ export function KruSection() {
             Bertemu dengan para penggerak inti yang mendedikasikan 
             waktu mereka di garda depan.
           </p>
-          <p className="font-body font-semibold text-brand-dark mt-4 animate-pulse">
-            (Geser untuk melihat semua ➔)
-          </p>
+<p className="font-body font-semibold text-brand-dark mt-4 
+              text-sm sm:text-base
+              animate-pulse">
+  (Geser untuk melihat semua ➔)
+</p>
         </div>
       </div>
 
