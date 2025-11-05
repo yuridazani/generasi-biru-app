@@ -23,7 +23,8 @@ const ManifestoCard = ({ icon, title, children }) => (
 const PullQuote = ({ children }) => (
   <div className="md:col-span-2 bg-brand-dark text-white p-10 rounded-2xl 
                   shadow-2xl flex items-center justify-center 
-                  transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                  transform transition-all duration-300 hover:scale-105 hover:shadow-2xl
+                  overflow-hidden"> {/* <--- TAMBAHKAN INI */}
     <blockquote className="relative">
       {/* Tanda kutip dekoratif menggunakan font display */}
       <span className="absolute -top-8 -left-8 font-display text-8xl text-steel-blue opacity-30">“</span>
