@@ -43,9 +43,9 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 bg-white shadow-md w-full z-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+<nav className="sticky top-0 bg-white shadow-md w-full z-50"> {/* Ganti z-20 ke z-50 */}
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-between h-16 md:h-20">
           
           {/* 1. Logo (Bold, Profesional) */}
           <a href="/" className="flex-shrink-0">
@@ -83,13 +83,11 @@ export function Navbar() {
       </div>
 
       {/* 5. Mobile Menu (Dropdown) */}
-      <div 
-        className={`
-          md:hidden w-full bg-white shadow-lg absolute left-0 z-10 
-          transition-all duration-300 ease-in-out
-          ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}
-        `}
-      >
+  <div className={`
+    md:hidden w-full bg-white shadow-lg 
+    transition-all duration-300 ease-in-out
+    ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}
+  `}>
         <div className="flex flex-col space-y-2 px-6 pt-4 pb-8">
           {navItems.map((item) => (
             <NavLink key={item.label} href={item.href}>

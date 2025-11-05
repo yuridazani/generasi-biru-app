@@ -35,11 +35,11 @@ function AnimatedNumber({ value, prefix = "", suffix = "" }) {
 }
 
 const StatCard = ({ value, label, prefix, suffix, className, labelClassName }) => (
-  <div className={`p-8 md:p-10 rounded-2xl shadow-lg ${className}`}>
-    <h3 className="font-stats text-5xl md:text-7xl">
+  <div className={`p-6 sm:p-8 md:p-10 rounded-2xl shadow-lg ${className}`}>
+    <h3 className="font-stats text-3xl sm:text-5xl md:text-7xl break-words">
       <AnimatedNumber value={value} prefix={prefix} suffix={suffix} />
     </h3>
-    <p className={`font-stats text-sm md:text-base uppercase mt-3 ${labelClassName}`}>
+    <p className={`font-stats text-xs sm:text-sm md:text-base uppercase mt-3 ${labelClassName}`}>
       {label}
     </p>
   </div>
@@ -47,7 +47,9 @@ const StatCard = ({ value, label, prefix, suffix, className, labelClassName }) =
 
 export function ImpactSection() {
   return (
-    <section className="bg-brand-dark py-24 md:py-32">
+<section className="bg-brand-dark py-24 md:py-32 
+                    min-h-screen flex items-center
+                    snap-start snap-always">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="font-stats text-sm text-safety-orange uppercase tracking-widest">

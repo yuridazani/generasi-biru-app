@@ -3,29 +3,34 @@ import { ArrowRight, Mountain, Leaf } from 'lucide-react';
 
 function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-alice-blue 
-                        flex items-center 
-                        min-h-[calc(100vh-5rem)]">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-          <div className="md:col-span-7 relative z-10 overflow-hidden">
-            <p className="text-sm md:text-base font-bold text-safety-orange uppercase tracking-widest mb-3">
-              Generasi Biru
-            </p>
+<section className="relative overflow-hidden bg-alice-blue 
+                    min-h-screen flex items-center
+                    snap-start snap-always
+                    px-4 sm:px-6 lg:px-8"> {/* Tambah padding horizontal */}
+  <div className="container mx-auto py-12 md:py-16">
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+      <div className="md:col-span-7">
+        <p className="text-xs sm:text-sm font-bold text-safety-orange uppercase tracking-widest mb-3">
+          Generasi Biru
+        </p>
 
-            <h1 className="font-display font-black text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-none text-brand-dark">
-              <span className="relative">
-                Garda Depan
-                <span className="absolute left-0 bottom-1 w-full h-2 bg-safety-orange opacity-70 -rotate-2"></span>
-              </span>
-              <br className="hidden md:block"/> Gerakan Iklim
-              <br className="hidden md:block"/> Indonesia.
-            </h1>
-            
-            <p className="mt-8 text-lg md:text-xl text-steel-blue max-w-2xl font-medium">
-              Kami adalah anak muda yang berdiri di garis terdepan, 
-              memimpin aksi nyata untuk masa depan Bumi yang lebih baik.
-            </p>
+        <h1 className="font-display font-black 
+                       text-3xl sm:text-4xl md:text-6xl lg:text-8xl 
+                       leading-tight text-brand-dark">
+          <span className="relative inline-block">
+            Garda Depan
+            <span className="absolute left-0 bottom-1 w-full h-1.5 md:h-2 
+                           bg-safety-orange opacity-70 -rotate-2"></span>
+          </span>
+          <br/> Gerakan Iklim
+          <br/> Indonesia.
+        </h1>
+        
+        <p className="mt-6 text-base sm:text-lg md:text-xl 
+                      text-steel-blue max-w-2xl font-medium">
+          Kami adalah anak muda yang berdiri di garis terdepan, 
+          memimpin aksi nyata untuk masa depan Bumi yang lebih baik.
+        </p>
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4">
               <a 

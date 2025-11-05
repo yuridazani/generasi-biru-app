@@ -1,24 +1,18 @@
 /* /src/index.css */
 
-/* 1. Terapkan Tailwind base styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 2. Terapkan Font Dasar & Background (Manifesto-Style) */
 @layer base {
   html {
-    @apply scroll-smooth; /* Ini opsional, tapi bikin 'snap' lebih halus */
+    @apply scroll-smooth;
   }
   body {
-    /* INI PERUBAHAN KUNCI: */
-    /* 1. Paksa body jadi 100% tinggi layar */
-    @apply h-screen; 
-    /* 2. Paksa body untuk scroll (bukan 'main' div) */
-    @apply overflow-y-scroll; 
-    /* 3. Aktifkan SCROLL SNAPPING */
-    @apply snap-y snap-mandatory; 
+    /* HAPUS semua ini: */
+    /* @apply h-screen overflow-y-scroll snap-y snap-mandatory; */
     
-    /* Ini style lama kita, tetap dipertahankan */
+    /* Ganti jadi ini aja: */
     @apply font-body bg-alice-blue text-brand-dark antialiased;
   }
+}

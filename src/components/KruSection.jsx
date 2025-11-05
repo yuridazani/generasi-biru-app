@@ -4,9 +4,6 @@ import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Users, ArrowRight } from 'lucide-react';
 
-/* ========================================
-   KOMPONEN CARD FIKTIF UNTUK KRU
-======================================== */
 const KruCard = ({ name, role, imgPlaceholder }) => (
   // 'flex-shrink-0' sangat penting untuk horizontal scroll
   <div className="flex-shrink-0 w-72 md:w-80 rounded-2xl shadow-xl 
@@ -14,8 +11,7 @@ const KruCard = ({ name, role, imgPlaceholder }) => (
                   transform transition-all duration-300 
                   hover:-translate-y-2 hover:shadow-2xl">
     
-    {/* Visual Placeholder (Anti-template) */}
-    {/* Daripada foto fiktif, kita gunakan palet warna kita */}
+
     <div className={`
       w-full h-48 bg-gradient-to-br from-steel-blue to-brand-dark 
       flex items-center justify-center

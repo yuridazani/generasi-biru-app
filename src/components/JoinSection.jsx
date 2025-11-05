@@ -48,7 +48,9 @@ const ActionCard = ({ href, title, description, buttonText, icon, isPrimary }) =
 export function JoinSection() {
   return (
     // Kita gunakan 'bg-white' untuk kontras
-    <section className="bg-white py-24 md:py-32">
+<section className="bg-white py-24 md:py-32 
+                    min-h-screen flex items-center
+                    snap-start snap-always">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* 1. Section Header (Jelas & Mendesak) */}

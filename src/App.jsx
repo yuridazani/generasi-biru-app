@@ -9,15 +9,18 @@ import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen">
       <Navbar />
-      <HeroSection /> 
-      <ManifestoSection />
-      <ImpactSection />
-      <KruSection />
-      <JoinSection />  
-      <Footer />         
-    </>
+      {/* Scroll container dengan snap */}
+      <main className="snap-y snap-mandatory overflow-y-scroll h-screen">
+        <HeroSection /> 
+        <ManifestoSection />
+        <ImpactSection />
+        <KruSection />
+        <JoinSection />
+        <Footer />
+      </main>
+    </div>
   );
 }
 
