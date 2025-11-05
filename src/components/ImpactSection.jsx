@@ -34,11 +34,11 @@ function AnimatedNumber({ value, prefix = "", suffix = "" }) {
   return <span ref={ref}>{formattedValue}</span>;
 }
 const StatCard = ({ value, label, prefix, suffix, className, labelClassName }) => (
-  <div className={`p-8 md:p-10 rounded-2xl shadow-lg ${className}`}>
-    <h3 className="font-stats text-4xl sm:text-5xl md:text-7xl">
+  <div className={`p-6 md:p-8 rounded-2xl shadow-lg ${className}`}> {/* Kurangi padding */}
+    <h3 className="font-stats text-4xl md:text-5xl lg:text-6xl"> {/* Kurangi size */}
       <AnimatedNumber value={value} prefix={prefix} suffix={suffix} />
     </h3>
-    <p className={`font-stats text-sm md:text-base uppercase mt-3 ${labelClassName}`}>
+    <p className={`font-stats text-xs md:text-sm uppercase mt-2 ${labelClassName}`}>
       {label}
     </p>
   </div>
@@ -46,21 +46,18 @@ const StatCard = ({ value, label, prefix, suffix, className, labelClassName }) =
 
 export function ImpactSection() {
   return (
-<section className="bg-brand-dark py-24 md:py-32 
-                    min-h-screen flex items-center
-                    snap-start snap-always">
+    <section className="bg-brand-dark py-16 md:py-20"> {/* Kurangi padding */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="font-stats text-sm text-safety-orange uppercase tracking-widest">
+        <div className="max-w-2xl mb-12">
+          <p className="font-stats text-xs text-safety-orange uppercase tracking-widest">
             Aksi Nyata
           </p>
-          <h2 className="font-display font-black text-4xl md:text-6xl text-white mt-4">
+          <h2 className="font-display font-black text-3xl md:text-5xl text-white mt-3">
             Bukti Kerja Kami
           </h2>
-          <p className="mt-6 text-lg md:text-xl text-alice-blue font-medium">
+          <p className="mt-4 text-base md:text-lg text-alice-blue font-medium">
             Kami tidak hanya bicara. Kami bertindak. Setiap angka di bawah ini 
             adalah jejak nyata dari gerakan kolektif kita di lapangan.
-            Ini adalah data kami, ini adalah kredibilitas kami.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-16">

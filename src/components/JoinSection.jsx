@@ -47,30 +47,23 @@ const ActionCard = ({ href, title, description, buttonText, icon, isPrimary }) =
 
 export function JoinSection() {
   return (
-    // Kita gunakan 'bg-white' untuk kontras
-<section className="bg-white py-24 md:py-32 
-                    min-h-screen flex items-center
-                    snap-start snap-always">
+    <section className="bg-white py-16 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* 1. Section Header (Jelas & Mendesak) */}
-        <div className="text-center max-w-3xl mx-auto">
-          <p className="font-stats text-sm text-safety-orange uppercase tracking-widest">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <p className="font-stats text-xs text-safety-orange uppercase tracking-widest">
             Titik Kumpul
           </p>
-          <h2 className="font-display font-black text-4xl md:text-6xl text-brand-dark mt-4">
-            Masuk Barisan.
-            <br/>
-            Gabung Gerak.
+          <h2 className="font-display font-black text-3xl md:text-5xl text-brand-dark mt-3">
+            Masuk Barisan.<br/>Gabung Gerak.
           </h2>
-          <p className="mt-6 text-lg md:text-xl text-steel-blue font-medium">
+          <p className="mt-4 text-base md:text-lg text-steel-blue font-medium">
             Gerakan ini membutuhkan semua orang. Pilih caramu 
             untuk berkontribusi dan menjadi bagian dari perubahan.
           </p>
         </div>
 
-        {/* 2. Grid CTA (Dua Pilihan Jelas) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           
           {/* Card 1: Aksi Nyata (Relawan) */}
           <ActionCard

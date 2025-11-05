@@ -38,28 +38,24 @@ const PullQuote = ({ children }) => (
 
 export function ManifestoSection() {
   return (
-<section className="bg-white py-24 md:py-32 
-                    min-h-screen flex items-center
-                    snap-start snap-always">
+    <section className="bg-white py-16 md:py-20"> {/* Kurangi padding */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* 1. Section Header (Profesional & Clean) */}
-        <div className="text-center max-w-3xl mx-auto">
-          <p className="font-stats text-sm text-safety-orange uppercase tracking-widest">
+        <div className="text-center max-w-2xl mx-auto mb-12"> {/* Kurangi margin */}
+          <p className="font-stats text-xs text-safety-orange uppercase tracking-widest">
             Poin Kami
           </p>
-          <h2 className="font-display font-black text-4xl md:text-6xl text-brand-dark mt-4">
+          <h2 className="font-display font-black text-3xl md:text-5xl text-brand-dark mt-3">
             Kenapa Kami Ada
           </h2>
-          <p className="mt-6 text-lg md:text-xl text-steel-blue font-medium">
+          <p className="mt-4 text-base md:text-lg text-steel-blue font-medium">
             Kami bukan organisasi nirlaba biasa. Kami adalah gerakan kolektif 
             yang percaya pada aksi radikal namun terukur, didukung oleh data 
             dan didorong oleh urgensi.
           </p>
         </div>
 
-        {/* 2. Modular Asymmetrical Grid (WAH Factor) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           
           {/* Poin 1: Aksi Nyata */}
           <ManifestoCard 

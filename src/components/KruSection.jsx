@@ -61,35 +61,29 @@ const JoinCard = () => (
 
 
 export function KruSection() {
-  // Ref untuk mengukur 'constraints' drag
   const constraintsRef = useRef(null);
 
   return (
-    // Kita gunakan 'bg-alice-blue' untuk kontras dari section 'Impact'
-    <section className="bg-alice-blue py-24 md:py-32 overflow-hidden">
+    <section className="bg-alice-blue py-16 md:py-20 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* 1. Section Header */}
-        <div className="text-center max-w-3xl mx-auto">
-          <p className="font-stats text-sm text-safety-orange uppercase tracking-widest">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <p className="font-stats text-xs text-safety-orange uppercase tracking-widest">
             Solidaritas
           </p>
-          <h2 className="font-display font-black text-4xl md:text-6xl text-brand-dark mt-4">
+          <h2 className="font-display font-black text-3xl md:text-5xl text-brand-dark mt-3">
             KRU Kami
           </h2>
-          <p className="mt-6 text-lg md:text-xl text-steel-blue font-medium">
+          <p className="mt-4 text-base md:text-lg text-steel-blue font-medium">
             Gerakan ini adalah 'Pasukan'. 
             Bertemu dengan para penggerak inti yang mendedikasikan 
             waktu mereka di garda depan.
           </p>
-<p className="font-body font-semibold text-brand-dark mt-4 
-              text-sm sm:text-base
-              animate-pulse">
-  (Geser untuk melihat semua ➔)
-</p>
+          <p className="font-body font-semibold text-brand-dark text-sm mt-3 animate-pulse">
+            (Geser untuk melihat semua ➔)
+          </p>
         </div>
       </div>
-
       {/* 2. Draggable Horizontal Scroll (WAH Factor) */}
       <motion.div 
         className="w-full mt-16 cursor-grab" 
