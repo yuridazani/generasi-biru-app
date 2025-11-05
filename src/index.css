@@ -1,0 +1,23 @@
+/* /src/index.css */
+
+/* 1. Terapkan Tailwind base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Terapkan Font Dasar & Background (Manifesto-Style) */
+@layer base {
+  body {
+    /* Kita pakai 'alice-blue' sebagai background, bukan putih polos.
+      Ini adalah "whitespace... rapi dan ritmis" kita.
+      Font default adalah 'Red Hat Display' (font-body) untuk Clean UX.
+    */
+    @apply font-body bg-alice-blue text-brand-dark antialiased;
+  }
+  
+  /* Otomatis styling untuk heading (WAH Factor) */
+  h1, h2, h3, h4, h5, h6 {
+    /* Semua heading otomatis pakai 'Unbounded' */
+    @apply font-display font-bold;
+  }
+}

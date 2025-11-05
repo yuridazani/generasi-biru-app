@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generasi Biru - Garda Depan Gerakan</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Krona+One&family=Red+Hat+Display:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Sesuai palet "Generasi Biru"
+              'polynesian-blue': '#054a91ff',
+              'steel-blue': '#3e7cb1ff',
+              'vista-blue': '#81a4cdff',
+              'alice-blue': '#dbe4eeff',
+              'safety-orange': '#f17300ff',
+              
+              // Alias untuk branding
+              'brand-dark': '#054a91ff',
+              'brand-medium': '#3e7cb1ff',
+              'brand-light': '#81a4cdff',
+              'brand-bg': '#dbe4eeff',
+              'brand-accent': '#f17300ff',
+            },
+            fontFamily: {
+              // Sesuai sistem 3-font kita
+              'display': ['Unbounded', 'sans-serif'], // Untuk Hero/Judul
+              'stats': ['Krona One', 'sans-serif'],   // Untuk "WAH" Factor
+              'body': ['Red Hat Display', 'sans-serif'], // Untuk UI & Teks
+            },
+
+            keyframes: {
+              'pulse-slow': {
+                '0%, 100%': { transform: 'scale(1)', opacity: '0.3' },
+                '50%': { transform: 'scale(1.05)', opacity: '0.5' },
+              },
+              'spin-slow': {
+                '0%': { transform: 'rotate(0deg)' },
+                '100%': { transform: 'rotate(360deg)' },
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'spin-slow': 'spin-slow 20s linear infinite',
+            }
+
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
