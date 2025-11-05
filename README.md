@@ -2,7 +2,7 @@
 
 Proyek ini merupakan studi kasus *front-end* fungsional yang dikembangkan oleh **Yurida Zani**.
 
-**[Tautkan Live Demo Di Sini Setelah Deploy]**
+**https://generasi-biru-app.vercel.app/**
 
 ---
 
