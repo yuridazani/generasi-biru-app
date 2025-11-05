@@ -46,7 +46,7 @@ const StatCard = ({ value, label, prefix, suffix, className, labelClassName }) =
 
 export function ImpactSection() {
   return (
-    <section className="bg-brand-dark py-16 md:py-20"> {/* Kurangi padding */}
+    <section className="bg-brand-dark py-16 md:py-20"> 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-12">
           <p className="font-stats text-xs text-safety-orange uppercase tracking-widest">

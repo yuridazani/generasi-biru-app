@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { Users, ArrowRight } from 'lucide-react';
 
 const KruCard = ({ name, role, imgPlaceholder }) => (
-  // 'flex-shrink-0' sangat penting untuk horizontal scroll
   <div className="flex-shrink-0 w-72 md:w-80 rounded-2xl shadow-xl 
                   overflow-hidden bg-white 
                   transform transition-all duration-300 
@@ -20,11 +19,9 @@ const KruCard = ({ name, role, imgPlaceholder }) => (
     </div>
     
     <div className="p-6">
-      {/* Kita gunakan 'Unbounded' (font-display) tapi lebih kecil */}
       <h3 className="font-display text-2xl font-bold text-brand-dark">
         {name}
       </h3>
-      {/* Kita gunakan 'safety-orange' untuk 'role' agar menonjol */}
       <p className="font-body font-bold text-safety-orange uppercase tracking-wider text-sm mt-1">
         {role}
       </p>
@@ -32,7 +29,6 @@ const KruCard = ({ name, role, imgPlaceholder }) => (
   </div>
 );
 
-// Card CTA di akhir scroll
 const JoinCard = () => (
   <div className="flex-shrink-0 w-72 md:w-80 rounded-2xl shadow-xl 
                   overflow-hidden bg-brand-dark 
@@ -84,20 +80,16 @@ export function KruSection() {
           </p>
         </div>
       </div>
-      {/* 2. Draggable Horizontal Scroll (WAH Factor) */}
       <motion.div 
         className="w-full mt-16 cursor-grab" 
         ref={constraintsRef}
       >
         <motion.div 
           className="flex gap-6 md:gap-8 px-4 sm:px-6 lg:px-8"
-          // Ini adalah kuncinya:
           drag="x"
           dragConstraints={constraintsRef}
-          // 'stiffness' memberi 'feel' Gen-Z yang responsif
           dragTransition={{ bounceStiffness: 300, bounceDamping: 20 }}
         >
-          {/* Data Kru Fiktif */}
           <KruCard 
             name="Alifia 'Lifi' R." 
             role="Koordinator Garda Depan" 
@@ -118,8 +110,6 @@ export function KruSection() {
             name="Elang Mahesa" 
             role="Advokasi & Kebijakan" 
           />
-          
-          {/* CTA Card di akhir */}
           <JoinCard />
 
         </motion.div>

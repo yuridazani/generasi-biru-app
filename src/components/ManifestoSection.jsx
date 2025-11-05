@@ -1,9 +1,5 @@
-// src/components/ManifestoSection.jsx
-
 import React from 'react';
 import { Zap, CheckCircle, Users } from 'lucide-react';
-
-// Komponen Card (Reusable untuk poin-poin)
 const ManifestoCard = ({ icon, title, children }) => (
   <div className="bg-alice-blue p-8 rounded-2xl shadow-lg 
                   transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
@@ -19,14 +15,12 @@ const ManifestoCard = ({ icon, title, children }) => (
   </div>
 );
 
-// Komponen Pull-Quote (WAH Factor Tipografi)
 const PullQuote = ({ children }) => (
   <div className="md:col-span-2 bg-brand-dark text-white p-10 rounded-2xl 
                   shadow-2xl flex items-center justify-center 
                   transform transition-all duration-300 hover:scale-105 hover:shadow-2xl
-                  overflow-hidden"> {/* <--- TAMBAHKAN INI */}
+                  overflow-hidden"> 
     <blockquote className="relative">
-      {/* Tanda kutip dekoratif menggunakan font display */}
       <span className="absolute -top-8 -left-8 font-display text-8xl text-steel-blue opacity-30">“</span>
       <p className="font-stats text-2xl md:text-3xl leading-snug z-10 relative">
         {children}
@@ -38,10 +32,10 @@ const PullQuote = ({ children }) => (
 
 export function ManifestoSection() {
   return (
-    <section className="bg-white py-16 md:py-20"> {/* Kurangi padding */}
+    <section className="bg-white py-16 md:py-20"> 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-2xl mx-auto mb-12"> {/* Kurangi margin */}
+        <div className="text-center max-w-2xl mx-auto mb-12"> 
           <p className="font-stats text-xs text-safety-orange uppercase tracking-widest">
             Poin Kami
           </p>
@@ -56,8 +50,6 @@ export function ManifestoSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          
-          {/* Poin 1: Aksi Nyata */}
           <ManifestoCard 
             icon={<Zap className="w-6 h-6 text-white" />}
             title="Aksi > Narasi"
@@ -65,20 +57,14 @@ export function ManifestoSection() {
             Waktu untuk bicara sudah habis. Kami fokus pada aksi nyata di lapangan. 
             'Bukti Kerja' kami adalah manifesto kami.
           </ManifestoCard>
-
-          {/* Poin 2: Pull-Quote (Tipografi Dramatis) */}
           <PullQuote>
             Kita tidak mewarisi Bumi dari leluhur,
             kita meminjamnya dari anak cucu kita.
           </PullQuote>
-
-          {/* Poin 3: Pull-Quote (Tipografi Dramatis) */}
           <PullQuote>
             Kredibel di mata donatur,
             radikal di mata aktivis.
           </PullQuote>
-
-          {/* Poin 4: Kredibilitas (Profesional) */}
           <ManifestoCard 
             icon={<CheckCircle className="w-6 h-6 text-white" />}
             title="Profesional & Kredibel"
@@ -86,8 +72,6 @@ export function ManifestoSection() {
             Gerakan kami *bold*, tapi data kami valid. Kami transparan
             dan profesional untuk membangun kepercayaan jangka panjang.
           </ManifestoCard>
-          
-          {/* Poin 5: Komunitas (Gen-Z) */}
           <ManifestoCard 
             icon={<Users className="w-6 h-6 text-white" />}
             title="Kekuatan Kolektif"

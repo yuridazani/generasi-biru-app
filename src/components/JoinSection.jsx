@@ -1,10 +1,8 @@
-// src/components/JoinSection.jsx
-
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import { ArrowRight, Mail } from 'lucide-react';
 
-// Card Aksi (Anti-template CTA)
-const ActionCard = ({ href, title, description, buttonText, icon, isPrimary }) => (
+const ActionCard = ({ to, title, description, buttonText, icon, isPrimary }) => (
   <div 
     className={`
       p-10 rounded-2xl shadow-xl transform transition-all duration-300
@@ -28,8 +26,8 @@ const ActionCard = ({ href, title, description, buttonText, icon, isPrimary }) =
       {description}
     </p>
     
-    <a 
-      href={href}
+    <Link 
+      to={to}
       className={`
         inline-flex items-center justify-center gap-3 w-full 
         px-8 py-3.5 mt-8 font-bold uppercase tracking-wider rounded-full 
@@ -41,7 +39,7 @@ const ActionCard = ({ href, title, description, buttonText, icon, isPrimary }) =
     >
       {buttonText}
       <ArrowRight className="w-5 h-5" />
-    </a>
+    </Link>
   </div>
 );
 
@@ -65,9 +63,8 @@ export function JoinSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           
-          {/* Card 1: Aksi Nyata (Relawan) */}
           <ActionCard
-            href="/join-form"
+            to="/join-form"
             title="Saya Siap Aksi"
             description="Gabung sebagai relawan di 'Misi Aktif' berikutnya. 
                          Daftarkan dirimu di 'Pasukan' Garda Depan."
@@ -76,9 +73,8 @@ export function JoinSection() {
             isPrimary={true}
           />
           
-          {/* Card 2: Aksi Pasif (Newsletter) */}
           <ActionCard
-            href="/newsletter"
+            to="/newsletter"
             title="Kirim Saya 'Transmisi'"
             description="Belum siap turun ke lapangan? Tetap terhubung. 
                          Dapatkan 'Laporan Medan' dan info aksi terbaru."
@@ -91,3 +87,5 @@ export function JoinSection() {
     </section>
   );
 }
+
+export default JoinSection;

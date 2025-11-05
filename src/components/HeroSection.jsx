@@ -1,36 +1,34 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import { ArrowRight, Mountain, Leaf } from 'lucide-react';
 
 function HeroSection() {
   return (
     <section className="relative bg-alice-blue 
                         flex items-center 
-                        py-20 md:py-24"> {/* GANTI min-h-screen jadi py-20 */}
+                        py-20 md:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
           <div className="md:col-span-7">
             <p className="text-xs sm:text-sm font-bold text-safety-orange uppercase tracking-widest mb-2">
               Generasi Biru
             </p>
-
-            {/* FONT SIZE LEBIH KECIL & FIT */}
             <h1 className="font-display font-black text-5xl md:text-6xl lg:text-7xl leading-tight text-brand-dark">
               <span className="relative inline-block">
                 Garda Depan
                 <span className="absolute left-0 bottom-0 w-full h-1.5 bg-safety-orange opacity-70 -rotate-2"></span>
               </span>
-              <br/>Gerakan Iklim
-              <br/>Indonesia.
+              <br />Gerakan Iklim
+              <br />Indonesia.
             </h1>
-            
+
             <p className="mt-6 text-base md:text-lg text-steel-blue max-w-xl font-medium leading-relaxed">
               Kami adalah anak muda yang berdiri di garis terdepan, 
               memimpin aksi nyata untuk masa depan Bumi yang lebih baik.
             </p>
-
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a 
-                href="/join"
+              <Link 
+                to="/join"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 
                            bg-safety-orange text-white font-bold uppercase tracking-wider text-sm
                            rounded-full shadow-lg hover:shadow-xl hover:bg-opacity-90 
@@ -38,9 +36,10 @@ function HeroSection() {
               >
                 Gabung Gerak Kami
                 <ArrowRight className="w-5 h-5" />
-              </a>
-              <a 
-                href="/manifesto"
+              </Link>
+
+              <Link 
+                to="/manifesto"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 
                            bg-transparent text-brand-dark font-bold uppercase tracking-wider text-sm
                            rounded-full border-2 border-brand-dark hover:bg-brand-dark hover:text-white 
@@ -48,10 +47,10 @@ function HeroSection() {
               >
                 Kenapa Kami Ada
                 <Leaf className="w-5 h-5" />
-              </a>
+              </Link>
             </div>
           </div>
-          
+
           <div className="md:col-span-5 hidden md:block">
             <div className="relative w-full h-80 rounded-3xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-br from-steel-blue to-brand-dark opacity-90"></div>
